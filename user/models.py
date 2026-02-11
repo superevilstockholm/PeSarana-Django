@@ -7,7 +7,7 @@ class User(AbstractUser):
         ADMIN = 'ADMIN', 'Admin'
         STUDENT = 'STUDENT', 'Student'
     
-    role = models.CharField(max_length=10, choices=Roles.choices, default=Roles.USER)
+    role = models.CharField(max_length=10, choices=Roles.choices, default=Roles.STUDENT)
 
     def is_admin(self) -> bool:
         return self.role == self.Roles.ADMIN
