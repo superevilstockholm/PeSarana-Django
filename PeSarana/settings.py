@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'core',
     'user',
     'student',
+    'classroom',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
