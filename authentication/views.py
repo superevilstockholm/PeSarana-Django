@@ -27,8 +27,10 @@ def signup(request: HttpRequest) -> HttpResponse | HttpResponseRedirect:
                 form.add_error('dob', 'Tanggal lahir tidak cocok.')
             else:
                 user = User.objects.create_user(
+                    name=student.name,
                     email=form.cleaned_data['email'],
-                    password=form.cleaned_data['password']
+                    password=form.cleaned_data['password'],
+                    role=User.Roles.STUDENT
                 )
                 student.user = user
                 student.save()
