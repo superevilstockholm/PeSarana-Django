@@ -4,10 +4,10 @@ from .models import User
 
 # Register your models here.
 class UserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'first_name', 'last_name', 'email', 'role')
+    list_display = ('name', 'email', 'role')
 
     list_filter = ('role',)
 
-    search_fields = ('username', 'first_name', 'last_name', 'email')
+    search_fields = ('name', 'email')
 
 admin.site.register(User, UserAdmin)
