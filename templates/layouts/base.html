@@ -1,0 +1,8 @@
+{% extends "App.html" %}
+{% block layout %}
+    {% include "components/navbar.html" %}
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+    {% include "components/footer.html" %}
+{% endblock layout %}
