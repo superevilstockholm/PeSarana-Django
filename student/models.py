@@ -11,4 +11,4 @@ class Student(TimeStampModel):
     name = models.CharField(max_length=255)
     dob = models.DateField()
     classroom = models.ForeignKey(Classroom, on_delete=models.CASCADE)
-    user = models.OneToOneField(User, null=True, on_delete=models.SET_NULL)
+    user = models.OneToOneField(User, null=True, blank=True, on_delete=models.SET_NULL)
